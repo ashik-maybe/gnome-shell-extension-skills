@@ -1,29 +1,45 @@
-# GNOME Shell Skill Maker
+# GNOME Shell Extension Skill
 
-This repository contains the `gnome-shell-extension` agent skill.
+[![skills.sh](https://skills.sh/b/ashik-maybe/gnome-shell-extension-skills)](https://skills.sh/ashik-maybe/gnome-shell-extension-skills)
 
-The skill teaches an agent to build GNOME Shell extensions for GNOME Shell 45 and later.
-
-This skill is informed by the [gjs.guide extensions documentation](https://gjs.guide/extensions/) (MIT licensed).
+An agent skill that teaches AI agents to build GNOME Shell extensions with GJS for GNOME Shell 45 and later.
 
 ## Install
 
-Copy the repository to your skills directory:
+### Project
 
 ```sh
-cp -r gnome-shell-skill-maker ~/.agents/skills/gnome-shell-extension
+npx skills add ashik-maybe/gnome-shell-extension-skills
 ```
 
-Or symlink it:
+### Global
 
 ```sh
+npx skills add ashik-maybe/gnome-shell-extension-skills -g
+```
+
+### Manual
+
+Symlink the repository into your agent's skills directory.
+
+```sh
+# Global (OpenCode compatibility path)
 ln -s "$PWD" ~/.agents/skills/gnome-shell-extension
+
+# Project
+ln -s "$PWD" .agents/skills/gnome-shell-extension
 ```
 
 ## Use
 
-Ask your agent to build a GNOME Shell extension.
-The agent loads `SKILL.md` on demand.
+Ask your agent to build a GNOME Shell extension. The agent loads `SKILL.md` on demand.
+
+## Contents
+
+- `SKILL.md` — skill entry point.
+- `references/` — detailed reference files.
+- `templates/` — copy-ready extension files.
+- `scripts/` — helper scripts.
 
 ## Verify
 
@@ -34,9 +50,6 @@ node -e 'JSON.parse(require("fs").readFileSync("templates/metadata.json", "utf8"
 xmllint --noout templates/schemas/org.gnome.shell.extensions.example.gschema.xml
 ```
 
-## Layout
+## License
 
-- `SKILL.md` — the skill entry point.
-- `references/` — detailed reference files.
-- `templates/` — copy-ready extension files.
-- `scripts/` — helper scripts.
+MIT. Informed by the [gjs.guide extensions documentation](https://gjs.guide/extensions/) (MIT licensed).
