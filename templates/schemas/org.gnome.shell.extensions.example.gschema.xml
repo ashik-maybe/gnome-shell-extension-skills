@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schemalist>
+  <schema id="org.gnome.shell.extensions.example" path="/org/gnome/shell/extensions/example/">
+    <key name="show-indicator" type="b">
+      <default>true</default>
+      <summary>Show indicator</summary>
+      <description>Whether to show the panel indicator</description>
+    </key>
+  </schema>
+</schemalist>
